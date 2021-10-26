@@ -15,10 +15,10 @@
 ![画像2](/readme-img/002.png)
 
 ## 動作環境
-* Mac OS X 10.14.4 (Mojave)
-* Xcode ver. 11.3.1
-* iPhone7 ver. 13.5.1
-* Swift SDK v1.1.0
+* Mac OS 11.6(Big Sur)
+* Xcode Version 13.0
+* Simulator Version 13.0(970)
+* iPhone X (iOS15.0.2)
 
 ※上記内容で動作確認をしています。
 ※古いバージョンだと動作しないい可能性があります。
