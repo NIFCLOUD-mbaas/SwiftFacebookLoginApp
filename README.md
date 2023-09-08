@@ -15,10 +15,10 @@
 ![画像2](/readme-img/002.png)
 
 ## 動作環境
-* Mac OS 11.5.2(Big Sur)
-* Xcode ver. 13.2.1
-* Simulator 13 Pro Max
-* iPhone 11 Pro Max (iOS15.2.1)
+
+* Mac OS 12.5.1 (Monterey)
+* Xcode Version 14.0
+* iPhone X (iOS 16)
 
 ※上記内容で動作確認をしています。
 ※古いバージョンだと動作しないい可能性があります。
