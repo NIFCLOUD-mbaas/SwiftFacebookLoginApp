@@ -15,6 +15,7 @@
 ![画像2](/readme-img/002.png)
 
 ## 動作環境
+
 * Mac OS 12.5.1 (Monterey)
 * Xcode Version 14.0
 * iPhone X (iOS 16)
@@ -150,7 +151,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         //********** SDKの初期化 **********
-        NCMB.setApplicationKey(applicationkey, clientKey: clientkey)
+        NCMB.initialize(applicationKey: applicationkey, clientKey: clientkey)
 
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
