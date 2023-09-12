@@ -16,12 +16,12 @@
 
 ## 動作環境
 
-* Mac OS 12.5.1 (Monterey)
-* Xcode Version 14.0
-* iPhone X (iOS 16)
+* Mac OS 13.4.1 (Venture)
+* Xcode Version 15.0
+* iPhone SE (iOS 17)
 
 ※上記内容で動作確認をしています。
-※古いバージョンだと動作しないい可能性があります。
+※古いバージョンだと動作しない可能性があります。
 ※Simulatorでは動作しない可能性があります。実機ビルドが必要な場合は[こちら](http://qiita.com/natsumo/items/3f1dd0e7f5471bd4b7d9)をご覧ください。
 
 ## 手順
@@ -73,7 +73,7 @@
 * 二番の「バンドルIDを追加する」を「Bundle Identifier」を入力します。XcodeプロジェクトのBundle IDをコピペしてください
 * 「Save」ボタンをクリックします
 
-<img src="readme-img/014.png" alt="画像14" width="800px"> 
+<img src="readme-img/014.png" alt="画像14" width="800px">
 
 * ダッシュボードに戻ります。
 
@@ -147,22 +147,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //********** APIキーの設定 **********
     let applicationkey = "YOUR_NCMB_APPLICATIONKEY"
     let clientkey      = "YOUR_NCMB_CLIENTKEY"
-    
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         //********** SDKの初期化 **********
         NCMB.initialize(applicationKey: applicationkey, clientKey: clientkey)
 
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
+
         return true
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
         FBSDKAppEvents.activateApp()
-        
+
     }
-    
+
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?,annotation: AnyObject) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
@@ -187,7 +187,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     } else {
         let fbManager = LoginManager()
         let permission = ["email", "public_profile"]
-        
+
         fbManager.logIn(permissions: permission, from: self, handler: { (result, error) in
             if (error != nil){
                 if(result!.isCancelled){
@@ -223,11 +223,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     self.label.text = "エラーが発生しました：\(String(describing: error))"
                 }
             }
-            
+
         })
-        
+
     }
-    
+
 }
 ```
 
@@ -251,7 +251,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
+
 }
 
 ```
